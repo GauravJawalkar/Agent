@@ -46,8 +46,8 @@ const Home = () => {
       </div>
       {data && (
         <div className='py-5'>
-          <div className="overflow-x-auto rounded-lg shadow-md py-5">
-            <table className="min-w-full divide-y divide-gray-200 text-sm text-left text-gray-800">
+          <div className="overflow-x-auto rounded-lg shadow-md p-5">
+            <table className="min-w-full table-auto divide-y divide-gray-200 text-sm text-left text-gray-800">
               <thead className="bg-gray-100">
                 <tr className='border-t border-gray-300'>
                   <th className="px-6 py-3 font-semibold tracking-wide border-r border-gray-300 ">Date</th>
