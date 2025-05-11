@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { google } from 'googleapis';
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(_req: NextRequest) {
+export async function GET(_: NextRequest) {
     try {
         const {
             GSC_CLIENT_ID,

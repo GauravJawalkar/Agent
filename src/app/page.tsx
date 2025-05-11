@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -5,12 +6,11 @@ import axios from 'axios';
 import Loader from './components/Loader';
 
 interface dataRowsProps {
-  keys: [string],
-  clicks: number,
-  ctr: number,
-  impressions: number,
+  keys: [string];
+  clicks: number;
+  ctr: number;
+  impressions: number;
   position: number
-
 }
 
 const Home = () => {
@@ -60,9 +60,9 @@ const Home = () => {
               </thead>
               <tbody className="divide-y divide-gray-100 bg-white">
                 {
-                  data?.rows?.length! >= 0 && data?.rows?.map(({ keys, clicks, ctr, impressions, position }: dataRowsProps) => {
+                  data.rows?.map(({ keys, clicks, ctr, impressions, position }: dataRowsProps) => {
                     return (
-                      <tr key={keys[0]}>
+                      <tr key={Math.floor(Math.random() * 10000 + 1)}>
                         <td className="px-6 py-4 text-center border-r border-gray-200">{keys[0]}</td>
                         <td className="px-6 py-4 text-center border-r border-gray-200">{position.toFixed(2)}</td>
                         <td className="px-6 py-4 text-center border-r border-gray-200">{0}</td>
@@ -77,8 +77,9 @@ const Home = () => {
             </table>
           </div>
         </div>
-      )}
-    </section>
+      )
+      }
+    </section >
   );
 };
 
